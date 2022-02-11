@@ -211,7 +211,7 @@
                         <configuration>
                             <transformers>
                                 <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                                    <mainClass>Library</mainClass>
+                                    <mainClass>DB</mainClass>
                                 </transformer>
                             </transformers>
                         </configuration>
@@ -228,7 +228,7 @@
                         <manifest>
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>lib/</classpathPrefix>
-                            <mainClass>Library</mainClass>
+                            <mainClass>DB</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
