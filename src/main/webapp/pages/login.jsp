@@ -6,12 +6,46 @@
     <meta charset="UTF-8"/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: cyan;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .form-group {
+            padding: 5px;
+        }
+
+        .form-group label {
+            width: 105px;
+            display: inline-block;
+        }
+
+        .form-group input {
+            width: 165px;
+            padding: 5px;
+        }
+    </style>
 </head>
 <body>
 <div align="center" class="d-flex flex-column">
     <form method="post" action="/login" id="auth_form">
-        <input type="login" placeholder="login" name="username"/>
-        <input type="password" placeholder="password" name="password"/>
+        <div class="form-group">
+            <label><b>Login:</b></label>
+            <input name="login" pattern="[a-zA-Z0-9]{3,10}" id="login" type="login"
+                   placeholder="Enter your login"
+                   required/>
+        </div>
+        <div class="form-group">
+            <label><b>Password:</b></label>
+            <input name="password" pattern="[a-zA-Z0-9]{3,7}" id="password" type="password"
+                   placeholder="Enter your password"
+                   required/>
+        </div>
+        <br/>
     </form>
 </div>
 <form action="/registration" method="get" id="reg_form"></form>
